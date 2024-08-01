@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Learning Web development survey form</title>
+
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+        color: white;
+      }
+      body {
+        font-size: 18px;
+        background: radial-gradient(
+            ellipse at top,
+            #16a085,
+            #229954,
+            transparent
+          ),
+          radial-gradient(ellipse at bottom, #4d9f0c, #196f3d, transparent);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+    
+      #main-box {
+        padding: 1em;
+        
+      }
+      input.first,
+      textarea,
+      select {
+        width: 100%;
+        min-height: 3em;
+        
+        border-radius: 5px;
+      }
+
+      label.about-you {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      select {
+        display: block;
+        margin: 5px 0;
+        font-size: 1rem;
+        color: black;
+        background-color: #ecf0f1;
+      }
+
+      textarea {
+        display: block;
+        margin: 10px 0;
+        color: black;
+        background-color: #ecf0f1;
+        border: 5px solid #196f3d;
+        font-size: 1rem;
+      }
+
+      button#submit {
+        width: 100%;
+        height: 2em;
+        font-size: 18px;
+        border-radius: 5px;
+        background-color: #ecf0f1;
+        color: black;
+      }
+
+      input::placeholder {
+        font-size: 15px;
+        color: #d0d3d4;
+      }
+
+      form #first-section input[type] {
+        background-color: #196f3d;
+      }
+
+      option {
+        color: black;
+      }
+
+      /* @media (max-width:768px){
+#main-box{
+  margin-left: 1rem;
+  width: 100%;
+}  
+
+} */
+    </style>
+  </head>
+
+  <body>
+    <div id="main-box">
+      <header>
+        <h1 id="title">The best way to Learn Web Development survey Form</h1>
+        <p id="description">
+          As part of our research to help new learners, we would appreciate your
+          kind input on the following questions
+        </p>
+      </header>
+
+      <form id="survey-form">
+        <section id="first-section">
+          <h2>Section 1: About You</h2>
+          <p>In this section, we ask you for some questions about yourself</p>
+
+          <label for="name-label" id="name-label" class="about-you"
+            >What is your name:</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="first"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="number-label" id="number-label" class="about-you">
+            How old are you:</label
+          >
+          <input
+            type="number"
+            id="number"
+            name="age"
+            placeholder=" your age"
+            min="10"
+            max="120"
+            class="first"
+            required
+          />
+
+          <label id="email-label" for="email" class="about-you">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your Email"
+            required
+            class="first"
+          />
+
+          <label for="gender" class="about-you"> Gender:</label>
+          <select id="gender" name="gender" class="first">
+            <option value="">(select one)</option>
+            <option value="1">Female</option>
+            <option value="2">Male</option>
+            <option value="3">Other</option>
+          </select>
+
+          <label for="country" class="about-you"
+            >What is your current country of residence:</label
+          >
+          <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="Enter your country of residence"
+            class="first"
+            required
+          />
+
+          <label for="ethnicity" class="about-you"
+            >What is your ethnicity:</label
+          >
+          <input
+            type="text"
+            id="ethnicity"
+            name="ethnicity"
+            placeholder=" eg. Black-African"
+            class="first"
+            required
+          />
+        </section>
+
+        <section id="second">
+          <h2>Section 2: Your Journey</h2>
+          <p>
+            In this section, we ask you some questions about your tech journey
+            and professional background
+          </p>
+
+          <label for="tech-role"
+            >Which statement best describes your involvement in tech?</label
+          >
+          <br />
+
+          <select id="dropdown">
+            <option value="" label="">(select one)</option>
+
+            <option
+              value="Non-tech role (I don't currenty work in a tech role)"
+              label="Non-tech role (I don't currenty work in a tech role)"
+            ></option>
+
+            <option
+              value="tech-enthusiast"
+              label="Interested in tech but not sure where to start"
+            >
+              Currently studying
+            </option>
+
+            <option
+              value="Currently studying"
+              label="Currently studying to transition into tech"
+            >
+              Currently studying
+            </option>
+
+            <option
+              value="Currently studying (interested in a career in tech)"
+              label="Currently studying (interested in a career in tech)"
+            >
+              Currently studying (interested in a career in tech)
+            </option>
+
+            <option
+              value="Tech role (I currently work in tech)"
+              label="Tech role (I currently work in tech)"
+            >
+              Tech role (I currently work in tech)
+            </option>
+
+            <option
+              value="I currently work in a tech support role but I'm interested in a tech role"
+              label="Tech role (interested in a new career in tech)"
+            >
+              Tech role (interested in a new career in tech)
+            </option>
+          </select>
+          <br />
+
+          <label
+            >How do you prefer to learn web
+            development/coding/programming?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="bootcamp"
+            name="learningMethod"
+            value="BootCamp"
+            class="method"
+          />
+          <label for="bootcamp">Boot Camp</label>
+          <br />
+
+          <input
+            type="radio"
+            id="self-learning"
+            name="learningMethod"
+            value="Self-learning"
+            class="method"
+          />
+          <label for="self-learning">Self-learning</label>
+          <br />
+
+          <input
+            type="radio"
+            id="Other-methods"
+            name="learningMethod"
+            value="Other-Methods"
+            class="inline"
+          />
+          <label for="other-methods">Other Methods</label>
+          <br />
+          <br />
+
+          <label for="reason"
+            >Why do you prefer this method? (Please elaborate)</label
+          >
+          <textarea
+            id="reason"
+            name="reason"
+            cols="30"
+            rows="5"
+            required
+          ></textarea>
+
+          <label>What resources have you found most helpful?</label>
+          <br />
+          <input
+            type="checkbox"
+            id="online-courses"
+            name="resources"
+            value="Online Courses"
+            class="check-box"
+          />
+          <label for="online-courses">Online Courses</label>
+          <br />
+          <input
+            type="checkbox"
+            id="books"
+            name="resources"
+            value="Books"
+            class="check-box"
+          />
+          <label for="books">Books</label>
+          <br />
+          <input
+            type="checkbox"
+            id="tutorials"
+            name="resources"
+            value="Tutorials"
+            class="check-box"
+          />
+          <label for="tutorials">Tutorials</label>
+          <br />
+          <input
+            type="checkbox"
+            id="community"
+            name="resources"
+            value="Community"
+            class="check-box"
+          />
+          <label for="community">Community</label><br />
+          <input
+            type="checkbox"
+            id="other-resources"
+            name="resources"
+            value="Other Resources"
+            class="check-box"
+          />
+          <label for="other-resources">Other Resources</label>
+        </section>
+        <br />
+        <label for="suggestions">Any suggestions or additional comments?</label>
+        <textarea name="suggestions" rows="5" cols="30"></textarea>
+        <br />
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
